@@ -12,6 +12,12 @@
     --primary-color: #2bc8a3;
     --secondry-color: #2c3e50;
     --white: #ffffff;
+    --black: #000000;
+}
+
+
+body {
+    transition: all 0.5s;
 }
 
 #profile {
@@ -20,18 +26,33 @@
 
 #star {
     position: relative;
+}
+
+#star i {
+    font-size: 1.5rem;
+}
+
+#star::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    background-color: var(--white);
+    left: -130px;
+    top: 10px;
 
 }
 
-/* #star::before {
+#star::after {
     content: "";
+    position: absolute;
     width: 120px;
     height: 2px;
-    background: #000;
-    left: 0;
-    top: 50%;
-    position: absolute;
-} */
+    background-color: var(--white);
+    right: -130px;
+    top: 10px;
+
+}
 
 a {
     text-decoration: none;
@@ -44,11 +65,98 @@ ul {
 h1 {
     font-size: 3rem;
     letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    padding-block: 1rem;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin-block-end: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    padding-block: 0.5rem;
 }
 
 button {
     cursor: pointer;
 }
+
+
+
+section {
+    padding: 1rem;
+}
+
+.logo-main {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.bg-1 {
+    background: url(img/cabin.png);
+}
+
+
+
+.bg-2 {
+    background: url(img/cake.png);
+}
+
+.bg-3 {
+    background: url(img/circus.png);
+}
+
+.bg-4 {
+    background: url(img/game.png);
+}
+
+.bg-5 {
+    background: url(img/safe.png);
+}
+
+.bg-6 {
+    background: url(img/submarine.png);
+}
+
+.bg,
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 2rem;
+}
+
+.overlay {
+    background-color: #2bc8a3cd;
+    /* opacity: 0.8; */
+    position: absolute;
+    inset: 0;
+    /* display: flex; */
+    color: var(--white);
+    font-size: 5rem;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition: all 0.5s;
+}
+
+.pro-show {
+    display: flex;
+}
+
 
 /* ===========header======= */
 
@@ -65,13 +173,21 @@ header {
 }
 
 nav {
-    position: absolute;
+    position: sticky;
     width: 100%;
-    inset: 0;
+    top: 0;
+    color: var(--white);
+    z-index: 99;
+    transition: all 0.5s;
 }
 
 nav a {
     color: var(--white);
+}
+
+nav a:active {
+    background-color: var(--white);
+    transition: all 0.5s;
 }
 
 .menu {
@@ -86,6 +202,162 @@ nav a {
 
 .show {
     height: auto;
+    overflow: auto;
+}
+
+/* Portfolio & Projects */
+
+#portfolio {
+    color: var(--secondry-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.pro {
+    position: relative;
+    aspect-ratio: 3/2;
+    border-radius: 2rem;
+    /* background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; */
+    position: relative;
+    cursor: pointer;
+}
+
+
+#portfolio #star::before,
+#portfolio #star::after,
+#contact #star::before,
+#contact #star::after {
+    background-color: var(--secondry-color);
+}
+
+/* About  */
+
+#about {
+    background-color: var(--primary-color);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-us {
+    padding-block: 1rem;
+    max-width: 900px;
+}
+
+.button {
+    padding: 1rem;
+    border: none;
+    border-radius: 0.8rem;
+    letter-spacing: 2px;
+    transition: all 0.5s;
+}
+
+#about-btn {
+    margin: auto;
+    display: block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+#about-btn:hover {
+    background-color: var(--white);
+    color: var(--black);
+
+}
+
+#contact {
+    color: var(--secondry-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ================Footer========================= */
+
+footer {
+    background-color: var(--secondry-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    font-size: 0.8rem;
+}
+
+
+.footer-sec {
+    padding-block: 10px;
+}
+
+.fa-brands {
+
+    /* width: 0.8rem;
+    height: 0.8rem; */
+    padding: 0.8rem;
+    margin-inline: 0.5rem;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+}
+
+
+@media (min-width: 600px) {
+    .menu {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--secondry-color);
+    }
+
+    nav>ul {
+        display: flex;
+        gap: 3rem;
+        padding-block: 1.5rem;
+    }
+
+    .projects {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+}
+
+@media (min-width: 768px) {
+    .projects {
+        width: 80%;
+        margin: auto;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .about-us {
+        display: flex;
+        gap: 1rem;
+        width: 70%;
+        margin: auto;
+    }
 }
 
 
@@ -105,6 +377,9 @@ nav a {
         text-align: left;
         overflow: hidden;
         height: 0;
+        position: absolute;
+        width: 100%;
+        transition: all 0.5s;
     }
 
     nav li {
@@ -112,6 +387,34 @@ nav a {
         border: 1px solid white;
     }
 
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
 
 
+
+
+/* ====== Contact ======== */
+
+label {
+    display: block;
+    font-size: 1.5rem;
+    transition: all 0.5s;
+}
+
+.label-sm {
+    font-size: 0.9rem;
+}
+
+input,
+textarea {
+    width: 100%;
+    max-width: 500px;
+    font-size: 0.9rem;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-block: 10px 20px;
+    outline: none;
+    transition: all 0.5s;
 }

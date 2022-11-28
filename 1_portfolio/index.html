@@ -13,23 +13,23 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
+    <nav>
+      <div class="logo">
+        <p class="logo-main">Start Bootstrap</p>
+        <button class="menu" id="menu">
+          Menu <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
     <header>
-      <nav>
-        <div class="logo">
-          <p>Start Bootstrap</p>
-          <button class="menu" id="menu">
-            Menu <i class="fa-solid fa-bars"></i>
-          </button>
-        </div>
-        <ul class="nav-links">
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#About">About</a></li>
-          <li><a href="#Contact">Contact</a></li>
-        </ul>
-      </nav>
       <img src="img/avataaars.svg" alt="profile" id="profile" />
       <h1>Start Bootstrap</h1>
       <div id="star">
@@ -37,5 +37,114 @@
       </div>
       <p>Graphic Artist - Web Designer - Illustrator</p>
     </header>
+
+    <main>
+      <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div id="star">
+          <i class="fa-solid fa-star"></i>
+        </div>
+
+        <div class="projects">
+
+          <div class="pro">
+            <div class="bg bg-1"></div>
+            <div class="overlay">+</div>
+          </div>
+
+          <div class="pro">
+            <div class="bg bg-2"></div>
+            <div class="overlay">+</div>
+          </div>
+
+          <div class="pro">
+            <div class="bg bg-3"></div>
+            <div class="overlay">+</div>
+          </div>
+
+          <div class="pro">
+            <div class="bg bg-4"></div>
+            <div class="overlay">+</div>
+          </div>
+
+          <div class="pro">
+            <div class="bg bg-5"></div>
+            <div class="overlay pro-show">+</div>
+          </div>
+
+          <div class="pro">
+            <div class="bg bg-6"></div>
+            <div class="overlay">+</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <h2>About</h2>
+        <div id="star">
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="about-us">
+          <p>
+            Freelancer is a free bootstrap theme created by Start Bootstrap. The
+            download includes the complete source files including HTML, CSS, and
+            JavaScript as well as optional SASS stylesheets for easy
+            customization.
+          </p>
+          <p>
+            You can create your own custom avatar for the masthead, change the
+            icon in the dividers, and add your email address to the contact form
+            to make it fully functional!
+          </p>
+        </div>
+        <button class="button" id="about-btn">Free Download</button>
+      </section>
+
+      <section id="contact">
+        <h2>Contact-us</h2>
+        <div id="star">
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="form">
+          <form>
+            <label for="name">Full Name
+                <input type="text" name='name' id="name" >
+              </label>
+            <label for="email">Email Address
+                <input type="email" name='email' id="email">
+              </label>
+            <label for="phone">Phone Number
+                <input type="tel" name='phone' id="phone">
+              </label>
+              <label for="msg">Message
+                <textarea name="msg" id="" cols="30" rows="10"></textarea>
+              </label>
+              <button class="button">Send</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="grid">
+        <div class="footer-sec">
+          <h4>Location</h4>
+          <Clark,>2215 John Daniel Drive <br> Clark, MO 65243</p>
+        </div>
+        <div class="footer-sec">
+          <h4>AROUND THE WEB</h4>
+          <div class="brands">
+            <i class="fa-brands fa-facebook-f"></i
+            ><i class="fa-brands fa-facebook-f"></i
+            ><i class="fa-brands fa-facebook-f"></i
+            ><i class="fa-brands fa-facebook-f"></i>
+          </div>
+        </div>
+        <div class="footer-sec">
+          <h4>ABOUT FREELANCER</h4>
+          Freelance is a free to use, MIT licensed Bootstrap theme created by Start Bootstrap .
+        
+      </div>
+    </footer>
   </body>
 </html>
