@@ -10,16 +10,9 @@ menu.addEventListener('click',()=>{
 });
 
 
-// let overlay = document.querySelectorAll('.pro');
 
-// console.log(overlay);
 
-// for(let i=0;i<overlay.length;i++){
-//     overlay[i].addEventListener('hover',()=>{
-//         overlay[i].classList.toggle('pro-show');
-//     })
-// }
-
+// Form
 let inputs=document.querySelectorAll('form input');
 
 let textarea=document.querySelector('textarea');
@@ -36,6 +29,4 @@ for(let i=0;i<inputArr.length;i++){
     inputArr[i].addEventListener('blur',function(){
         this.parentElement.classList.remove('label-sm');
     });
-
-
 }

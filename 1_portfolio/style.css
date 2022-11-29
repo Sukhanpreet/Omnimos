@@ -153,7 +153,7 @@ section {
     transition: all 0.5s;
 }
 
-.pro-show {
+.bg:hover .overlay {
     display: flex;
 }
 
@@ -292,7 +292,7 @@ footer {
     background-color: var(--secondry-color);
     color: var(--white);
     text-align: center;
-    padding: 1rem;
+    /* padding: 1rem; */
 }
 
 footer p {
@@ -337,11 +337,6 @@ footer p {
         grid-template-columns: 1fr 1fr;
     }
 
-    footer .grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-
-    }
 
 }
 
@@ -358,6 +353,13 @@ footer p {
         width: 70%;
         margin: auto;
     }
+
+    footer .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 1rem;
+    }
+
 }
 
 
@@ -417,4 +419,9 @@ textarea {
     margin-block: 10px 20px;
     outline: none;
     transition: all 0.5s;
+}
+
+.copyright {
+    background-color: #1d2834;
+    padding: 1rem;
 }
